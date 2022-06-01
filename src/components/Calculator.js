@@ -8,15 +8,6 @@ const Calcu = () => {
     next: null,
     operation: null,
   });
-  // componentDidMount = () => {
-  //   this.setState({
-  //     total: 0,
-  //     next: null,
-  //     operation: null,
-  //   });
-  // }
-
-  // render() {
   const handleEvent = (e) => {
     const oprObject = calculate(state, e.target.textContent);
     setState(oprObject);
