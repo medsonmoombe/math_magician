@@ -44,7 +44,7 @@ body {
 .home-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 
   /* justify-content: flex-start; */
   padding-left: 20px;
@@ -52,8 +52,15 @@ body {
 }
 
 .welcome {
+  margin-top: 50px;
   font-size: 27px;
   color: orange;
+}
+
+.para {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .calculator-dis {
