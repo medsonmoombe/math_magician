@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Keys from './Keys';
 import calculate from '../logic/calculate';
 
-class Calcu extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = { total: 0, next: null, operation: null };
-  }
-
-    componentDidMount = () => {
-      this.setState({
-        total: 0,
-        next: null,
-        operation: null,
-      });
-    }
-
+const Calcu = () => {
+  const [state, setState] = useState({
+    total: 0,
+    next: null,
+    operation: null,
+  });
+  const handleEvent = (e) => {
+    const oprObject = calculate(state, e.target.textContent);
+    setState(oprObject);
+  };
+  
     render() {
       const handleEvent = (e) => {
         const oprObject = calculate(this.state, e.target.textContent);
@@ -60,5 +57,6 @@ class Calcu extends React.PureComponent {
       );
     }
 }
+
 
 export default Calcu;
